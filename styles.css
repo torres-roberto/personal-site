@@ -3,16 +3,44 @@
 }
 
 .profile-area {
-    height: 50vh;    
+    height: 35vh;    
     display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: space-around;
+    flex-direction: column;
 }
 
-.profile-links {
+#profile-pic {
+    box-shadow: 2px 4px 10px grey;
+    transition: transform .2s;
+}
+
+.welcome-message {
     display: flex;
-    list-style-type: none; 
-    width: 10vh;
-    height: 10vh;
-    justify-content: space-between;
+    justify-content: center;  
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+#profile-pic:hover {
+    cursor: pointer;
+    box-shadow: 2px 4px 10px black;
+    transform: scale(1.05); 
+}
+
+.profile {
+    position: relative;
+    transition: visibility 0.3s linear,opacity 0.3s linear;
+}
+
+.hidden-profile {
+    opacity: 0;
+    transition: visibility 0.3s linear,opacity 0.3s linear;
+}
+
+.about-me {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
